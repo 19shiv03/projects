@@ -1,0 +1,65 @@
+ <!DOCTYPE>
+<html>
+  
+      <style>
+        body{
+          background:black; 
+          display:flex;
+          flex-directtion:column;
+          justify-content:center;
+          min-height:100vh;
+        }
+        
+      </style>
+      
+        <body>  
+            <form method="POST" class="post-form" action="/create/">  
+                    {% csrf_token %}  
+                <div class="container">  
+            <br>  
+                <div class="form-group">  
+                <label class="col-sm-1 col-form-label"></label>  
+                <div class="col-sm-4">  
+                <h2 style="color:white">Enter Details</h2>  
+                </div>  
+              </div>  
+              <br>
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label" style="color:white">Title:</label>  
+                <div class="col-sm-4">  
+                  {{ form.title }}  
+                </div>  
+              </div> 
+              <br> 
+              <div class="form-group row">  
+                <label class="col-sm-2 col-form-label" style="color:white">Author:</label>  
+                <div class="col-sm-4">  
+                  {{ form.author }}  
+                </div>  
+              </div>  
+              <br>
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label" style="color:white">Content:</label>  
+                <div class="col-sm-4">  
+                  {{ form.content }}  
+                </div>  
+              </div> 
+              <br> 
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label" style="color:white">Status:</label>  
+                <div class="col-sm-4">  
+                  {{ form.status }}  
+                </div>  
+              </div> 
+              <br> 
+                 <div class="form-group row">   
+                 <label class="col-sm-1 col-form-label"></label>   
+                 <div class="col-sm-4">   
+                 <button type="submit" class="btn btn-primary">Submit</button>   
+                 </div>   
+              </div>   
+                </div>  
+            </form>  
+            </body>  
+     
+</html> 
